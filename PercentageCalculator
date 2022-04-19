@@ -1,0 +1,32 @@
+-- Scripted By Ic35k_Jason
+--
+
+Example --
+
+--Require The Module
+local PercentageCalculator require(Module Location)
+
+For Example If the player's walkspeed is equal to 16 and you try to make it increase by 50%
+
+local Result = PercentageCalculator:Calculate(MainNumber,50,100) -- 50/100
+--MainNumber Is The WalkSpeed
+
+Print(Result) -- Result equal to 8
+
+Just now i already  mentioned Walkspeed increased 50%
+
+--Humanoid.Walkspeed = 16 + math.floor(Result)
+
+Final Result - 24
+
+
+local ModuleHandler = {}
+
+function ModuleHandler:Calculate(A,B,C)
+	local G_ = A * B
+	
+	local Result = G_ / C
+	return Result
+end
+
+return ModuleHandler
